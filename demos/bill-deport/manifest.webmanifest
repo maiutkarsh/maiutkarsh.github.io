@@ -1,0 +1,26 @@
+{
+  "name": "Bill Deport — GST Billing, Inventory & Accounting",
+  "short_name": "Bill Deport",
+  "description": "GST billing, inventory, customers, payroll and reports — one fast platform for Indian businesses.",
+  "id": "/dashboard",
+  "start_url": "/dashboard?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#0D47A1",
+  "theme_color": "#0D47A1",
+  "lang": "en",
+  "categories": ["business", "finance", "productivity"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "New Invoice", "url": "/invoices/new?source=pwa", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Customers", "url": "/customers?source=pwa", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Help & Support", "url": "/support?source=pwa", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

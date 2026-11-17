@@ -1,0 +1,1 @@
+function c(g=[]){const e=new Map;for(const t of g){const s=Number(t.gstRate)||0,a=e.get(s)||{rate:s,taxable:0,cgst:0,sgst:0,igst:0};a.taxable+=t.taxableValue||0,a.cgst+=t.cgst||0,a.sgst+=t.sgst||0,a.igst+=t.igst||0,e.set(s,a)}return[...e.values()].map(t=>({...t,tax:t.cgst+t.sgst+t.igst})).sort((t,s)=>t.rate-s.rate)}export{c as b};

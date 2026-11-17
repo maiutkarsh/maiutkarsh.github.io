@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/demos/bill-deport/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <!-- Theme-aware browser/OS chrome colour (Android status bar, Safari top) -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)" />
+    <!-- PWA: installable app (manifest + iOS home-screen metadata) -->
+    <link rel="manifest" href="/demos/bill-deport/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/demos/bill-deport/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- black-translucent = the web app draws edge-to-edge, up under the status
+         bar / Dynamic Island; the app supplies safe-area padding itself. -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Bill Deport" />
+    <title>Bill Deport — GST Billing, Inventory & Accounting Software for Indian Businesses</title>
+    <!-- Default meta — the server overrides these per marketing route
+         (server/src/modules/public/seo.js); the SPA updates them on navigation. -->
+    <meta
+      name="description"
+      content="Bill Deport is a modern, GST-ready business platform for Indian SMBs — billing, inventory, customers, payroll and reports in one fast web app. Start free."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Prevent flash of wrong theme / language — apply before paint
+      (function () {
+        try {
+          var t = localStorage.getItem('erp-theme') || 'system';
+          var dark = t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+          var lang = localStorage.getItem('erp-lang');
+          if (lang) document.documentElement.setAttribute('lang', lang);
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/demos/bill-deport/assets/index-Bps9zO0t.js"></script>
+    <link rel="modulepreload" crossorigin href="/demos/bill-deport/assets/react-vendor-Buf6eOwT.js">
+    <link rel="modulepreload" crossorigin href="/demos/bill-deport/assets/query-DGqtvATj.js">
+    <link rel="modulepreload" crossorigin href="/demos/bill-deport/assets/icons-DCiFJgtG.js">
+    <link rel="stylesheet" crossorigin href="/demos/bill-deport/assets/index-6xDAFXOi.css">
+  </head>
+  <body class="bg-bg text-text antialiased">
+    <div id="root"></div>
+  </body>
+</html>

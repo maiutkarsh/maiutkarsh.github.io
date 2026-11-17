@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utkarsh Kumar — Portfolio</title>
+  <meta name="description" content="Utkarsh Kumar — B.Tech AI & ML student, software builder and Founder & CEO of SATH (सहायता). Live project demos, journey and achievements." />
+  <meta name="theme-color" content="#06070B" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Utkarsh Kumar — Portfolio" />
+  <meta property="og:description" content="B.Tech AI & ML student · Software builder · Founder & CEO of SATH (सहायता)" />
+  <meta property="og:image" content="assets/founder.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23818CF8'/><stop offset='1' stop-color='%2322D3EE'/></linearGradient></defs><rect width='64' height='64' rx='18' fill='%2306070B'/><text x='50%' y='60%' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='30' fill='url(%23g)'>UK</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#top" class="logo" aria-label="Home">UK<span>.</span></a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#journey">Journey</a>
+      <a href="#founder">Founder</a>
+    </nav>
+    <a href="#contact" class="nav__cta">Let’s talk</a>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle light and dark mode">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- HERO (no photo here — the founder photo lives further down) -->
+    <section class="hero wrap">
+      <div class="pill reveal"><span class="pulse-dot"></span><span id="heroStatus"></span></div>
+      <h1 class="hero__title reveal">
+        <span class="hero__hi">Hi, I’m</span>
+        <span class="hero__name" id="heroName"></span>
+      </h1>
+      <p class="hero__role reveal">I’m a <span class="rotator" id="rotator"></span></p>
+      <p class="hero__intro reveal" id="heroIntro"></p>
+      <div class="hero__cta reveal">
+        <a href="#work" class="btn btn--primary">Explore my work <span aria-hidden="true">→</span></a>
+        <a href="infrapulse/?scenario=blackout-z04" class="btn btn--glass"><span class="live-dot"></span> Live demo: InfraPulse</a>
+      </div>
+      <div class="bento reveal" id="heroStats"></div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" aria-label="Skills and interests">
+      <div class="marquee__track" id="marquee"></div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="wrap section section--tight">
+      <div class="skills" id="skills"></div>
+    </section>
+
+    <!-- WORK -->
+    <section class="wrap section" id="work">
+      <div class="section__head reveal">
+        <span class="kicker">01 — Selected work</span>
+        <h2>Things I’ve <em>built</em></h2>
+        <p class="muted">Every project with a live demo opens right in your browser — no install, no sign-up.</p>
+      </div>
+      <div id="featured"></div>
+      <div class="projects" id="projects"></div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="wrap section" id="achievements">
+      <div class="section__head reveal">
+        <span class="kicker">02 — Achievements &amp; certificates</span>
+        <h2>Recognition <em>along the way</em></h2>
+      </div>
+      <div class="certs" id="certs"></div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="wrap section" id="journey">
+      <div class="section__head reveal">
+        <span class="kicker">03 — Journey</span>
+        <h2>Education, ventures <em>&amp; milestones</em></h2>
+      </div>
+      <div class="filters reveal" id="filters" role="tablist" aria-label="Filter journey"></div>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <!-- FOUNDER -->
+    <section class="wrap section" id="founder">
+      <div class="founder reveal">
+        <figure class="founder__media">
+          <div class="founder__frame"><img id="founderPhoto" alt="Utkarsh Kumar, Founder & CEO of SATH" loading="lazy" width="900" height="1200" /></div>
+          <figcaption class="founder__tag">
+            <strong id="founderName"></strong>
+            <span id="founderRole"></span>
+          </figcaption>
+        </figure>
+        <div class="founder__body">
+          <span class="kicker">04 — From the founder</span>
+          <h2>SATH <span class="deva gold">सहायता</span></h2>
+          <blockquote id="founderQuote"></blockquote>
+          <p id="founderText" class="muted"></p>
+          <p class="sig deva">— उत्कर्ष</p>
+          <a id="founderSite" class="btn btn--glass">Visit the SATH website <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="wrap section" id="contact">
+      <div class="contact reveal">
+        <span class="kicker">05 — Contact</span>
+        <h2>Have an idea, a project <em>or an opportunity?</em></h2>
+        <p class="muted">I’m always happy to talk about technology, startups and building useful things.</p>
+        <div class="contact__links" id="contactLinks"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <span>© <span id="year"></span> Utkarsh Kumar</span>
+    <span class="muted">Designed &amp; built in Bengaluru</span>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Certificate preview">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">✕</button>
+    <img id="lightboxImg" alt="" />
+    <a id="lightboxPdf" class="btn btn--primary" target="_blank" rel="noopener">Open PDF ↗</a>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
